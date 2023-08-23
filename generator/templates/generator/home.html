@@ -1,0 +1,45 @@
+{% extends 'generator/layout.html'%}
+
+{%block content%}
+<h1 class="text-center " >¡Prueba el generator 3000!</h1>
+
+<div class="col-md-4 offset-md-4 ">
+    <form action="{% url 'gcontra'%}" class="card card-body p-5">
+        <h1>Genera tu contraseña</h1>
+        <label for="longitud" style="border: 5px inset rgb(0, 100, 240); margin: 2px;">Selecciona cantidad de caracteres</label>
+        <select name="longitud" id="longitud" class="form-control" style="margin-bottom: 20px;">
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+        </select>
+        <div class="form-check form-switch my-2">
+            <label for="uppercase" class="form-check-label" style="border: 2px dashed black;">Uppercase</label>
+            <input type="checkbox" class="form-check-input" name="uppercase" id="uppercase">
+        </div>
+       
+        <div class="form-check form-switch my-2">
+            <label for="number" class="form-check-label" style="border: 2px dashed black; margin: 2px;">Number</label>
+            <input type="checkbox" class="form-check-input" id="number" name="number">
+        </div>
+        
+        <div class="form-check form-switch my-2">
+            <label for="special" class="form-check-label" style="border: 2px dashed black; margin: 2px;">Caracteres especiales</label>
+            <input type="checkbox" class="form-check-input" id="special" name="special" style="margin-bottom: 20px;">
+        </div>
+        
+    
+        <button type="submit" class="btn btn-primary">Generar</button>
+    
+    
+    </form>
+</div>
+{%endblock%}
